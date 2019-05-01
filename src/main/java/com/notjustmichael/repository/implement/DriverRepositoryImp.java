@@ -4,6 +4,7 @@ import com.notjustmichael.domain.Driver;
 import com.notjustmichael.repository.DriverRepository;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class DriverRepositoryImp implements DriverRepository {
@@ -28,7 +29,10 @@ public class DriverRepositoryImp implements DriverRepository {
 
     @Override
     public Driver update(Driver driver) {
-        return null;
+        drivers.remove(driver);
+        drivers.add(driver);
+
+        return driver;
     }
 
     @Override
@@ -37,8 +41,24 @@ public class DriverRepositoryImp implements DriverRepository {
     }
 
     @Override
-    public Driver read(String s) {
-        return null;
+    public Driver read(String s) throws NullPointerException {
+
+        Iterator i = drivers.iterator();
+        Driver temp;
+        Driver found = null;
+
+        while (i.hasNext())
+        {
+            temp = ((Driver)i.next());
+            if(s.equals(temp.getdNo()))
+            {
+                found = temp;
+            }
+
+        }
+
+        return found;
+
     }
 
     @Override

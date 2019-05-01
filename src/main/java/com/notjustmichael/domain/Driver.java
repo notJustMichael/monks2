@@ -52,6 +52,15 @@ public class Driver {
                     ", dPhNo='" + dPhNo + '\'' +
                     '}';
         }
+
+        /*public boolean equals(Driver d)
+        {
+            if(d.getdNo()==this.dNo)
+            {
+                return true;
+            }
+            else return false;
+        }*/
     }
 
 
