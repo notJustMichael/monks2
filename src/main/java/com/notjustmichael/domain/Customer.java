@@ -1,5 +1,7 @@
 package com.notjustmichael.domain;
 
+import java.util.Objects;
+
 public class Customer {
     private String cAddress, cName, cPhNo, cNo;
 
@@ -61,5 +63,17 @@ public class Customer {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return cNo.equals(customer.cNo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cNo);
+    }
 
 }

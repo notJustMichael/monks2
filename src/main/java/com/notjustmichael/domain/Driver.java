@@ -1,5 +1,7 @@
 package com.notjustmichael.domain;
 
+import java.util.Objects;
+
 public class Driver {
     private String dNo, dName, dPhNo;
 
@@ -53,15 +55,19 @@ public class Driver {
                     '}';
         }
 
-        /*public boolean equals(Driver d)
-        {
-            if(d.getdNo()==this.dNo)
-            {
-                return true;
-            }
-            else return false;
-        }*/
+
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Driver driver = (Driver) o;
+        return dNo.equals(driver.dNo);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(dNo);
+    }
 
 }
