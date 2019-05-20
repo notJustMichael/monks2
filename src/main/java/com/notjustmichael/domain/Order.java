@@ -1,6 +1,7 @@
 package com.notjustmichael.domain;
 
-import java.lang.reflect.Array;
+import com.notjustmichael.domain.items.Item;
+
 import java.util.ArrayList;
 
 public class Order {

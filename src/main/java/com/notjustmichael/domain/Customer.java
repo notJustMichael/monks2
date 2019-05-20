@@ -1,9 +1,10 @@
 package com.notjustmichael.domain;
 
 public class Customer {
-    private String cAddress, cName, cPhNo;
+    private String cAddress, cName, cPhNo, cNo;
 
     private Customer(Builder builder) {
+        this.cNo = builder.cNo;
         this.cAddress = builder.cAddress;
         this.cName = builder.cName;
         this.cPhNo = builder.cPhNo;
@@ -22,10 +23,16 @@ public class Customer {
     }
 
     public static class Builder{
-        private String cAddress, cName, cPhNo;
+        private String cAddress, cName, cPhNo, cNo;
 
         public Builder cPhNo( String cPhNo) {
             this.cPhNo = cPhNo;
+            return this;
+        }
+
+        public Builder cNo (String cNo)
+        {
+            this.cNo = cNo;
             return this;
         }
 
