@@ -1,6 +1,6 @@
 package com.notjustmichael.factory;
 
-import com.notjustmichael.domain.Driver;
+import com.notjustmichael.domain.driver.Driver;
 import com.notjustmichael.util.Generator;
 
 public class DriverFactory {

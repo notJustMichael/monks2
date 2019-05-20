@@ -1,12 +1,10 @@
 package com.notjustmichael;
 
 
-import com.notjustmichael.domain.Customer;
+import com.notjustmichael.domain.customer.Customer;
 import com.notjustmichael.factory.CustomerFactory;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class CustomerFactoryTest {
     @Test

@@ -1,6 +1,6 @@
 package com.notjustmichael.factory;
 
-import com.notjustmichael.domain.Customer;
+import com.notjustmichael.domain.customer.Customer;
 
 public class CustomerFactory {
 

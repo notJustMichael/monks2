@@ -1,4 +1,4 @@
-package com.notjustmichael.domain;
+package com.notjustmichael.domain.customer;
 
 import java.util.Objects;
 

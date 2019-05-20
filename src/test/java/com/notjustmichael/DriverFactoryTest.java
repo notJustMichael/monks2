@@ -1,5 +1,5 @@
 package com.notjustmichael;
-import com.notjustmichael.domain.Driver;
+import com.notjustmichael.domain.driver.Driver;
 import com.notjustmichael.factory.DriverFactory;
 import com.notjustmichael.util.Generator;
 import static org.junit.Assert.assertTrue;

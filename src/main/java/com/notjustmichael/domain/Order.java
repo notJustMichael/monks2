@@ -1,7 +1,7 @@
 package com.notjustmichael.domain;
 
+import com.notjustmichael.domain.customer.Customer;
 import com.notjustmichael.domain.items.Item;
-import javafx.util.Builder;
 
 import java.util.ArrayList;
 

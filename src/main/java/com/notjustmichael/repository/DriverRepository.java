@@ -1,6 +1,6 @@
 package com.notjustmichael.repository;
 
-import com.notjustmichael.domain.Driver;
+import com.notjustmichael.domain.driver.Driver;
 
 import java.util.Set;
 

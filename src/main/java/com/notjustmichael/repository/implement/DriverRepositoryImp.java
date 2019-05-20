@@ -1,6 +1,6 @@
 package com.notjustmichael.repository.implement;
 
-import com.notjustmichael.domain.Driver;
+import com.notjustmichael.domain.driver.Driver;
 import com.notjustmichael.repository.DriverRepository;
 
 import java.util.HashSet;

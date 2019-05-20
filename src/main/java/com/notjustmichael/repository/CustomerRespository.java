@@ -1,6 +1,6 @@
 package com.notjustmichael.repository;
 
-import com.notjustmichael.domain.Customer;
+import com.notjustmichael.domain.customer.Customer;
 
 import java.util.Set;
 

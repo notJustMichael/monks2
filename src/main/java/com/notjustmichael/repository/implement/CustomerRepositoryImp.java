@@ -1,6 +1,6 @@
 package com.notjustmichael.repository.implement;
 
-        import com.notjustmichael.domain.Customer;
+        import com.notjustmichael.domain.customer.Customer;
         import com.notjustmichael.repository.CustomerRespository;
 
         import java.util.HashSet;

@@ -1,4 +1,4 @@
-package com.notjustmichael.domain;
+package com.notjustmichael.domain.driver;
 
 import java.util.Objects;
 
