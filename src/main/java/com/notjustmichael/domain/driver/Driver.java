@@ -1,9 +1,15 @@
 package com.notjustmichael.domain.driver;
 
+import com.notjustmichael.domain.Order;
+import com.notjustmichael.domain.customer.CustContact;
+
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Driver {
-    private String dNo, dName, dPhNo;
+    private String dNo, dName;
+    private DriverContact dPhNo;
+    private ArrayList<Order> order;
 
     private Driver(Builder builder) {
         this.dNo = builder.dNo;
@@ -20,13 +26,14 @@ public class Driver {
     }
 
     public String getdPhNo() {
-        return dPhNo;
+        return dPhNo.getPhNo();
     }
 
     public static class Builder{
-        private String dNo, dName, dPhNo;
+        private String dNo, dName;
+        DriverContact dPhNo;
 
-        public Builder dPhNo( String dPhNo) {
+        public Builder dPhNo( DriverContact dPhNo) {
             this.dPhNo = dPhNo;
             return this;
         }

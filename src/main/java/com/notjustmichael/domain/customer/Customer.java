@@ -3,7 +3,9 @@ package com.notjustmichael.domain.customer;
 import java.util.Objects;
 
 public class Customer {
-    private String cAddress, cName, cPhNo, cNo;
+    private String cName, cNo;
+    private CustAddress cAddress;
+    private CustContact cPhNo;
 
     private Customer(Builder builder) {
         this.cNo = builder.cNo;
@@ -13,7 +15,7 @@ public class Customer {
     }
 
     public String getcAddress() {
-        return cAddress;
+        return cAddress.getAd();
     }
 
     public String getcName() {
@@ -21,13 +23,16 @@ public class Customer {
     }
 
     public String getcPhNo() {
-        return cPhNo;
+        return cPhNo.getPhNo();
     }
 
     public static class Builder{
-        private String cAddress, cName, cPhNo, cNo;
+        private String cName, cNo;
+        private CustAddress cAddress;
+        private CustContact cPhNo;
 
-        public Builder cPhNo( String cPhNo) {
+
+        public Builder cPhNo( CustContact cPhNo) {
             this.cPhNo = cPhNo;
             return this;
         }
@@ -43,7 +48,7 @@ public class Customer {
             return this;
         }
 
-        public Builder cAddress(String cAddress){
+        public Builder cAddress(CustAddress cAddress){
             this.cAddress = cAddress;
             return this;
         }
