@@ -1,6 +1,6 @@
 package com.notjustmichael.factory;
 
-import com.notjustmichael.domain.Order;
+import com.notjustmichael.domain.items.Order;
 import com.notjustmichael.domain.customer.Customer;
 import com.notjustmichael.domain.items.Item;
 

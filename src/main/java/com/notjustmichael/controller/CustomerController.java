@@ -11,36 +11,43 @@ import java.util.Set;
 
 public class CustomerController {
 
-    @Autowired
-    @Qualifier("CustomerServiceImpl")
-    private CustomerService service;
+    private final CustomerService service;
 
-    @PostMapping("customer/create")
+    @Autowired
+    public CustomerController(@Qualifier("CustomerServiceImpl") CustomerService service) {
+        this.service = service;
+    }
+
+    @GetMapping("/customer")
+    @ResponseBody
+    public String welcomeCust() {return "WELCOME TO THE CUSTOMER PAGE" ;}
+
+    @PostMapping("/customer/create")
     @ResponseBody
     public Customer create(Customer customer) {
         return service.create(customer);
     }
 
-    @PostMapping("customer/update")
+    @PostMapping("/customer/update")
     @ResponseBody
     public Customer update(Customer customer) {
         return service.update(customer);
     }
 
-    @GetMapping("customer/delete/{id}")
+    @GetMapping("/customer/delete/{id}")
     @ResponseBody
     public void delete(@PathVariable String id) {
         service.delete(id);
 
     }
 
-    @GetMapping("customer/read/{id}")
+    @GetMapping("/customer/read/{id}")
     @ResponseBody
     public Customer read(@PathVariable String id) {
         return service.read(id);
     }
 
-    @GetMapping("customer/read/all")
+    @GetMapping("/customer/read/all")
     @ResponseBody
     public Set<Customer> getAll() {
         return service.getAll();

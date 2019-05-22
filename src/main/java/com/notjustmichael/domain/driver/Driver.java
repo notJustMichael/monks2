@@ -1,7 +1,6 @@
 package com.notjustmichael.domain.driver;
 
-import com.notjustmichael.domain.Order;
-import com.notjustmichael.domain.customer.CustContact;
+import com.notjustmichael.domain.items.Order;
 
 import java.util.ArrayList;
 import java.util.Objects;

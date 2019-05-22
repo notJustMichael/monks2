@@ -1,7 +1,6 @@
-package com.notjustmichael.domain;
+package com.notjustmichael.domain.items;
 
 import com.notjustmichael.domain.customer.Customer;
-import com.notjustmichael.domain.items.Item;
 
 import java.util.ArrayList;
 
