@@ -1,12 +1,16 @@
 package com.notjustmichael.repository.implement;
 
 import com.notjustmichael.domain.driver.Driver;
+import com.notjustmichael.domain.driver.DriverContact;
+import com.notjustmichael.factory.DriverFactory;
 import com.notjustmichael.repository.DriverRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+@Repository("InMem1")
 public class DriverRepositoryImp implements DriverRepository {
 
     private static DriverRepositoryImp repositoryImp = null;
@@ -20,6 +24,8 @@ public class DriverRepositoryImp implements DriverRepository {
         if(repositoryImp == null) repositoryImp = new DriverRepositoryImp();
         return repositoryImp;
     }
+
+
 
     @Override
     public Driver create(Driver driver) {
@@ -37,6 +43,22 @@ public class DriverRepositoryImp implements DriverRepository {
 
     @Override
     public void delete(String s) {
+
+        Iterator i = drivers.iterator();
+        Driver temp;
+        Driver found = null;
+
+        while (i.hasNext())
+        {
+            temp = ((Driver)i.next());
+            if(s.equals(temp.getdNo()))
+            {
+                found = temp;
+            }
+
+        }
+
+        drivers.remove(found);
 
     }
 

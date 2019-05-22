@@ -16,7 +16,7 @@ public class Order {
     {
         this.ordNo = builder.ordNo;
         this.customer = builder.customer;
-        this.items = items;
+        this.items = builder.items;
 
     }
 
@@ -33,7 +33,7 @@ public class Order {
 
         public Builder customer (Customer customer)
         {
-            this.ordNo = ordNo;
+            this.customer = customer;
             return this;
         }
 
@@ -41,6 +41,10 @@ public class Order {
         {
             this.items = items;
             return this;
+        }
+
+        public Order build() {
+            return new Order(this);
         }
 
 

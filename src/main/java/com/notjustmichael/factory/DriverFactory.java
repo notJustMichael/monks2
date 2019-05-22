@@ -11,7 +11,6 @@ public class DriverFactory {
                 .dNo(dNo)
                 .dPhNo(dPhNo)
                 .dName(name)
-                .dNo(Generator.generateId())
                 .build();
     }
 

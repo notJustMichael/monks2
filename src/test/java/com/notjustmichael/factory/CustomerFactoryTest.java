@@ -1,4 +1,4 @@
-package com.notjustmichael;
+package com.notjustmichael.factory;
 
 
 import com.notjustmichael.domain.customer.CustAddress;

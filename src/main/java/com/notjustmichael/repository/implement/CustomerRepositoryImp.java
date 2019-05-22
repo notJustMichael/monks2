@@ -1,13 +1,16 @@
 package com.notjustmichael.repository.implement;
 
 import com.notjustmichael.domain.customer.Customer;
-        import com.notjustmichael.repository.CustomerRespository;
+        import com.notjustmichael.repository.CustomerRepository;
+import org.springframework.stereotype.Repository;
 
-        import java.util.HashSet;
+import java.util.HashSet;
         import java.util.Iterator;
         import java.util.Set;
 
-public class CustomerRepositoryImp implements CustomerRespository {
+
+@Repository("InMem2")
+public class CustomerRepositoryImp implements CustomerRepository {
 
     private static CustomerRepositoryImp repositoryImp = null;
     private Set<Customer> customers;
@@ -22,9 +25,9 @@ public class CustomerRepositoryImp implements CustomerRespository {
     }
 
     @Override
-    public Customer create(Customer driver) {
-        customers.add(driver);
-        return driver;
+    public Customer create(Customer customer) {
+        customers.add(customer);
+        return customer;
     }
 
     @Override
@@ -37,6 +40,22 @@ public class CustomerRepositoryImp implements CustomerRespository {
 
     @Override
     public void delete(String s) {
+
+        Iterator i = customers.iterator();
+        Customer temp;
+        Customer found = null;
+
+        while (i.hasNext())
+        {
+            temp = ((Customer)i.next());
+            if(s.equals(temp.getcPhNo()))
+            {
+                found = temp;
+            }
+
+        }
+
+        customers.remove(found);
 
     }
 
